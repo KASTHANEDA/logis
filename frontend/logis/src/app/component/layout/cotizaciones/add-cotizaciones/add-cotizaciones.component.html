@@ -1,0 +1,151 @@
+<main class="main">
+
+
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center " style="background-image: url('assets/img/page-header.jpg');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Sample Inner Page</h2>
+            <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas
+              consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione
+              sint. Sit quaerat ipsum dolorem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="inicio">Home</a></li>
+          <li>Cotizaciones</li>
+        </ol>
+      </div>
+    </nav>
+  </div>
+  <h2>Formulario de Cotización</h2>
+
+  <div class="container">
+
+
+
+    <form class="contenedorAdd" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <div class="Columna">
+        <label for="idCot">ID de Cotización:</label>
+        <input type="number" id="idCot" name="idCot" required value="3">
+
+        <label for="Cliente">Cliente:</label>
+        <input type="text" id="Cliente" name="Cliente" required value="EXITO SAS">
+
+        <label for="Modalidad">Modalidad:</label>
+        <input type="text" id="Modalidad" name="Modalidad" required value="LCL">
+
+        <label for="CiudadOrigen">Ciudad de Origen:</label>
+        <input type="text" id="CiudadOrigen" name="CiudadOrigen" required value="BABILONIA">
+
+        <label for="DireccionOrigen">Dirección de Origen:</label>
+        <input type="text" id="DireccionOrigen" name="DireccionOrigen" required value="CALE 44 #U 78-956">
+
+        <label for="CiudadDestino">Ciudad de Destino:</label>
+        <input type="text" id="CiudadDestino" name="CiudadDestino" required value="MANIZALEZ">
+
+        <label for="DireccionDestino">Dirección de Destino:</label>
+        <input type="text" id="DireccionDestino" name="DireccionDestino" required value="CALLE 45465# DF7485">
+
+        <label for="Asunto">Asunto:</label>
+        <input type="text" id="Asunto" name="Asunto" required value="GUANTES INDUSTRIALES ">
+
+      </div>
+      <div class="Columna">
+
+        <label for="valorCif">Valor CIF:</label>
+        <input type="number" id="valorCif" name="valorCif" required value="585">
+
+        <label for="ValorCifCalculado">Valor CIF Calculado:</label>
+        <input type="number" id="ValorCifCalculado" name="ValorCifCalculado" required value="525">
+
+        <label for="TotalGastosOrigen">Total Gastos Origen:</label>
+        <input type="number" id="TotalGastosOrigen" name="TotalGastosOrigen" required value="48121">
+
+        <label for="moneda">Moneda:</label>
+        <input type="text" id="moneda" name="moneda" required value="USD">
+        <label for="trm">TRM:</label>
+        <input type="number" id="trm" name="trm" required value="3800.25">
+
+        <label for="factorEuroDollar">Factor Euro-Dollar:</label>
+        <input type="number" id="factorEuroDollar" name="factorEuroDollar" required value="1.2">
+
+        <label for="descripcionMercancia">Descripción de Mercancía:</label>
+        <input type="text" id="descripcionMercancia" name="descripcionMercancia" required value="GFADFGBVBBGB DFBFBTGHWRTHRTHRTH">
+
+        <label for="fechaCreacion">Fecha de Creación:</label>
+        <input type="text" id="fechaCreacion" name="fechaCreacion" required>
+
+
+      </div>
+      <div class="Columna">
+        <label for="ClaseMatId">Clase Mat Id:</label>
+        <input type="number" id="ClaseMatId" name="ClaseMatId" required value="EXPLOSIVO">
+
+        <label for="TipoNegocio">Tipo de Negocio:</label>
+        <input type="text" id="TipoNegocio" name="TipoNegocio" required value="EXPORTACION">
+
+        <label for="ModoTransporte">Modo de Transporte:</label>
+        <input type="text" id="ModoTransporte" name="ModoTransporte" required value="MARITIMO">
+
+        <label for="TerminosNegociacion">Términos de Negociación:</label>
+        <input type="text" id="TerminosNegociacion" name="TerminosNegociacion" required value="fob">
+
+        <label for="EstadoColor">Estado Color:</label>
+        <input type="text" id="EstadoColor" name="EstadoColor" required value="#56767">
+
+        <label for="diasTransito">Días de Tránsito:</label>
+        <input type="number" id="diasTransito" name="diasTransito" required value="30">
+
+        <label for="VigenciaOferta">Vigencia de Oferta:</label>
+        <input type="text" id="VigenciaOferta" name="VigenciaOferta" required value="2023/08/29">
+
+        <label for="ValorDeclarado">Valor Declarado:</label>
+        <input type="number" id="ValorDeclarado" name="ValorDeclarado" required value="4800">
+
+      </div>
+      <div class="Columna">
+        <label for="fechaModificacion">Fecha de Modificación:</label>
+        <input type="text" id="fechaModificacion" name="fechaModificacion" required value="2023-05-18">
+
+        <label for="PaisOrigen">País de Origen:</label>
+        <input type="text" id="PaisOrigen" name="PaisOrigen" required value="Islas Caiman">
+
+        <label for="PaisDestino">País de Destino:</label>
+        <input type="text" id="PaisDestino" name="PaisDestino" required value="ucrania">
+
+        <label for="fechaProximaRevision">Fecha de Próxima Revisión:</label>
+        <input type="text" id="fechaProximaRevision" name="fechaProximaRevision" required value="2023/05/5">
+
+        <label for="idProveedores">ID de Proveedores:</label>
+        <input type="number" id="idProveedores" name="idProveedores" required value="551">
+
+        <label for="Servicios">Servicios:</label>
+        <input type="text" id="Servicios" name="Servicios" required value="CARGA Y SEGURO">
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required value="ABIERTTO">
+
+        <label for="comercial">Comercial:</label>
+        <input type="text" id="comercial" name="comercial" required value="JAIRO">
+        <!-- bonton de agregar  -->
+        <input type="submit" value="agregar" class="btn btn-primary" >
+      </div>
+
+
+
+    </form>
+
+  </div>
+
+
+
+
+
+
+</main>

@@ -1,0 +1,37 @@
+<div class="container-sm align-content-center justify-content-center" >
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">      
+        <div class="mb-1">
+            <label>nombre</label>
+            <input type="text" class="form-control" formControlName="nombre" title="nombre">
+        </div>
+        <div class="mb-1">
+            <label>apellido</label>
+            <input type="text" class="form-control" formControlName="apellido" title="apellido">
+        </div>
+        <div class="mb-1">
+            <label>edad</label>
+            <input type="number" class="form-control" formControlName="edad" title="edad">
+        </div>
+        <div class="mb-1">
+            <label>login</label>
+            <input type="text" class="form-control" formControlName="login" title="login">
+        </div>
+        <section class="mb-1">
+            <label>email</label>
+            <input type="email" class="form-control" formControlName="email" title="email">
+        </section>
+        <section class="mb-1">
+            <label>password</label>
+            <input type="password" class="form-control" formControlName="password" title="password">
+        </section>
+        <section class="mb-1">
+            <label>estado</label>
+            <input type="text" class="form-control" formControlName="estado" title="estado">
+        </section>
+        <section class="mb-1">
+            <label>perfil</label>
+            <input type="text" class="form-control" formControlName="perfil" title="perfil">
+        </section>
+        <input  type="submit" value="Enviar" class="btn btn-primary" >
+    </form>
+</div>

@@ -1,0 +1,59 @@
+
+
+#########
+
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+
+
+###############################
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg7UcMSFgrknGEPpgpiyOfQkSyUChItjwKU2VI
+
+###########
+
+#########
+
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+
+###########
+
+POST http://localhost:9100/api/cotizaciones
+autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg7UcMSFgrknGEPpgpiyOfQkSyUChItjwKU2VI
+Content-Type: application/json
+
+{
+  "idCot": 3,
+  "Cliente": "CYGCARGO",
+  "Modalidad": "FGGHH",
+  "CiudadOrigen": "FRANKSFOT",
+  "DireccionOrigen": "Ejemplo de rigen",
+  "CiudadDestino": "MEXICO",
+  "DireccionDestino": "Ejemplo de dirección de destino",
+  "Asunto": "Ejemplo de asunto",
+  "ClaseMatId": 456,
+  "TipoNegocio": "Ejemplo de tipo de negocio",
+  "ModoTransporte": "Ejemplo de modo de transporte",
+  "TerminosNegociacion": "Ejemplo de términos de negociación",
+  "EstadoColor": "Ejemplo de estado color",
+  "diasTransito": 7,
+  "VigenciaOferta": "Ejemplo de vigencia de oferta",
+  "ValorDeclarado": 789,
+  "valorCif": 1234,
+  "ValorCifCalculado": 98,
+  "TotalGastosOrigen": 54,
+  "moneda": "USD",
+  "trm": 15,
+  "factorEuroDollar": 8,
+  "descripcionMercancia": "Ejemplo de descripción de mercancía",
+  "fechaCreacion": "2023-09-29",
+  "fechaModificacion": "2023-09-29",
+  "PaisOrigen": "Ejemplo de país de origen",
+  "PaisDestino": "Ejemplo de país de destino",
+  "fechaProximaRevision": "2023-10-29",
+  "idProveedores": 7890,
+  "Servicios": "Ejemplo de servicios",
+  "estado": "Activo",
+  "comercial": "Ejemplo de comercial"
+}
+
+####

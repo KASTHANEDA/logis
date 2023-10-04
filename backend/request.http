@@ -1,0 +1,211 @@
+
+
+#########
+
+GET http://localhost:9100/api/users HTTP/1.1
+//autorizado: : $2a$12$0vY0/RnWlPUr.IC8gJjHPeNJuUf38drzRYLF9eejdsE.laIAeV3YS
+###########
+
+#########
+
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+
+###########
+
+
+POST http://localhost:9100/api/usersMany HTTP/1.1
+Content-Type: application/json
+
+
+   [
+  {
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "edad": 30,
+    "login": "juanperez123",
+    "password": "contraseña123",
+    "email": "juan@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "María",
+    "apellido": "Gómez",
+    "edad": 25,
+    "login": "mariagomez456",
+    "password": "password456",
+    "email": "maria@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "López",
+    "edad": 35,
+    "login": "carloslopez789",
+    "password": "pass789",
+    "email": "carlos@example.com",
+    "estado": "inactivo",
+    "perfil": "administrador"
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Martínez",
+    "edad": 28,
+    "login": "anamartinez101",
+    "password": "password101",
+    "email": "ana@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Rodríguez",
+    "edad": 32,
+    "login": "pedrorodriguez222",
+    "password": "pass222",
+    "email": "pedro@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "González",
+    "edad": 27,
+    "login": "sofiagonzalez333",
+    "password": "password333",
+    "email": "sofia@example.com",
+    "estado": "inactivo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Luis",
+    "apellido": "Hernández",
+    "edad": 40,
+    "login": "luishernandez444",
+    "password": "pass444",
+    "email": "luis@example.com",
+    "estado": "activo",
+    "perfil": "administrador"
+  },
+  {
+    "nombre": "Elena",
+    "apellido": "Sánchez",
+    "edad": 29,
+    "login": "elenasanchez555",
+    "password": "password555",
+    "email": "elena@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Lara",
+    "edad": 33,
+    "login": "miguellara666",
+    "password": "pass666",
+    "email": "miguel@example.com",
+    "estado": "inactivo",
+    "perfil": "usuario"
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "Pérez",
+    "edad": 31,
+    "login": "lauraperez777",
+    "password": "password777",
+    "email": "laura@example.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  }
+]
+
+
+#####
+
+GET http://localhost:9100/api/users/64f293c7a25d8630acbeed67 HTTP/1.1
+
+
+#####
+
+
+#####
+PUT http://localhost:9100/api/users/64f293c7a25d8630acbeed67 HTTP/1.1
+Content-Type: application/json
+ 
+      {
+    "nombre": "jAIRO",
+    "apellido": "CASTAÑEDA",
+    "edad": 31,
+    "login": "HGHFJHH",
+    "password": "passNHHNHJword777",
+    "email": "laNura@eNxample.com",
+    "estado": "activo",
+    "perfil": "usuario"
+  }
+
+  
+
+#####
+
+DELETE  http://localhost:9100/api/users/64f7e39e671f41317dae16e5 HTTP/1.1
+
+
+##### 
+
+DELETE http://localhost:9100/api/users HTTP/1.1
+
+Content-Type: application/json
+
+#####
+
+###########################
+POST http://localhost:9100/api/register HTTP/1.1
+Content-Type: application/json
+
+
+   
+  {
+    "nombre": "FFFGG",
+    "apellido": "Lara",
+    "edad": 33,
+    "login": "miguellara666",
+    "password": "123",
+    "email": "miguel@example.com",
+    "estado": "inactivo",
+    "perfil": "usuario"
+  }
+ 
+
+######
+
+###############################
+
+GET http://localhost:9100/api/users HTTP/1.1
+autorizado: abcd
+######
+####
+
+
+GET http://localhost:9100/api/users HTTP/1.1
+####
+
+POST http://localhost:9100/api/login HTTP/1.1
+Content-Type: application/json
+   
+  {
+    
+    "login": "KASTHANEDA",
+    "password": "123"
+  }
+#############
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+autorizado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTQ1NzA4MjJ9.ZhSfkTDALX3_vbaMfOdyNh_0rjNHzDrVEYyiLAdE2Uo
+
+###########
+
+#########
+
+GET http://localhost:9100/api/cotizaciones HTTP/1.1
+
+###########
