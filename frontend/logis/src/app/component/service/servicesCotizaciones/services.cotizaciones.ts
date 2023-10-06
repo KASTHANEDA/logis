@@ -56,7 +56,7 @@ export class cotizacionesServices {
       })
     }
     
-    console.log('holi')
+    console.log('holi2')
 
     return firstValueFrom( 
       this.httpClient.delete<any>(`${this.baseUrl}/id`,formValue)
