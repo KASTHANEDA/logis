@@ -11,12 +11,12 @@ autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg
 
 ###########
 
-#########
+######### CONSULTAR 
 
 GET http://localhost:9100/api/cotizaciones HTTP/1.1
 
 ###########
-
+##AGREGAR 
 POST http://localhost:9100/api/cotizaciones
 autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg7UcMSFgrknGEPpgpiyOfQkSyUChItjwKU2VI
 Content-Type: application/json
@@ -57,3 +57,9 @@ Content-Type: application/json
 }
 
 ####
+############
+
+### DELETE 
+
+DELETE  http://localhost:9100/api/cotizaciones/64f29716a25d8630acbeed73 HTTP/1.1
+autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg7UcMSFgrknGEPpgpiyOfQkSyUChItjwKU2VI

@@ -64,6 +64,8 @@ export class AddCotizacionesComponent {
     const res = await this.cotizacionServices.AddCotizaciones(this.formulario.value);
     console.log(res)
     this.router.navigate(['/cotizaciones'])
+    console.log(this.formulario.value)
   }
+  
 
 }

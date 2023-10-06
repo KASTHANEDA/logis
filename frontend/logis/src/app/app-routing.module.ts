@@ -26,6 +26,7 @@ const routes: Routes = [
   {    path: 'contactenos', component: ContactenosComponent  },
   {    path: 'cotizaciones', component: CotizacionesComponent ,canActivate:[loginGuard] },
    {    path: 'AddCotizaciones', component: AddCotizacionesComponent ,canActivate:[loginGuard] },
+   {    path: 'DelCotizaciones', component: CotizacionesComponent ,canActivate:[loginGuard] },
   {    path: '', component: CarrusellComponent  },
   {    path: '**', component: CarrusellComponent  }
   

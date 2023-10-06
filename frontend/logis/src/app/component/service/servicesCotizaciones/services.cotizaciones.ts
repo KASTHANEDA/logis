@@ -12,7 +12,7 @@ export class cotizacionesServices {
   
   httpClient = inject(HttpClient);
   baseUrl = 'http://localhost:9100/api/cotizaciones'
-  UrlCot = 'http://localhost:9100/api/AddCotizaciones'
+  UrlCot = 'http://localhost:9100/api'
  
 
   getAll(){
@@ -36,12 +36,34 @@ export class cotizacionesServices {
       })
     }
     
+    console.log(formValue)
+
     return firstValueFrom( 
-      this.httpClient.post<any>(`${this.UrlCot}/AddCotizaciones`,httpOptions,formValue)
+      this.httpClient.post<any>(`${this.baseUrl}`,formValue,httpOptions)
      
+
     )
+    
   }
 
+  DelCotizaciones(formValue:any){
+    const token = localStorage.getItem('user_token');
+    console.log(token)
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'autorizado':localStorage.getItem('user_token')!
+      })
+    }
+    
+    console.log('holi')
+
+    return firstValueFrom( 
+      this.httpClient.delete<any>(`${this.baseUrl}/id`,formValue)
+     
+    )
+    
+  }
 
   //constructor() { }
 }
