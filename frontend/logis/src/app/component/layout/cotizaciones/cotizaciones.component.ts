@@ -23,7 +23,7 @@ export class CotizacionesComponent {
       console.error('Error al obtener datos: ', error);
     }
   }
-  DelCotizaciones(){
-    const cot =  this.cotService.DelCotizaciones(arrCot[]);
+  DelCotizaciones(a: any){
+    const cot =  this.cotService.DelCotizaciones(a);
   }
 }
