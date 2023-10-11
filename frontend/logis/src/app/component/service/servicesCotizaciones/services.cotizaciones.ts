@@ -1,71 +1,32 @@
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Token } from '@angular/compiler';
-import { Injectable,inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
-
 
 @Injectable({
   providedIn: 'root'
 })
-export class cotizacionesServices {
-  
-  httpClient = inject(HttpClient);
-  baseUrl = 'http://localhost:9100/api/cotizaciones'
-  UrlCot = 'http://localhost:9100/api'
- 
+export class CotizacionesService {
+  private baseUrl = 'http://localhost:9100/api/cotizaciones';
 
-  getAll(){
-    const httpOptions = {
+  constructor(private httpClient: HttpClient) {}
+
+  private getHttpOptions() {
+    return {
       headers: new HttpHeaders({
-        'autorizado':localStorage.getItem('user_token')!
+        'autorizado': localStorage.getItem('user_token') || ''
       })
-    }
-    return firstValueFrom(
-      this.httpClient.get<any[]>(this.baseUrl,httpOptions)
-    );
+    };
   }
 
-  AddCotizaciones(formValue:any){
-    const token = localStorage.getItem('user_token');
-    console.log(token)
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'autorizado':localStorage.getItem('user_token')!
-      })
-    }
-    
-    console.log(formValue)
-
-    return firstValueFrom( 
-      this.httpClient.post<any>(`${this.baseUrl}`,formValue,httpOptions)
-     
-
-    )
-    
+  getAll() {
+    return firstValueFrom(this.httpClient.get<any[]>(this.baseUrl, this.getHttpOptions()));
   }
 
-  DelCotizaciones(formValue:any){
-    const token = localStorage.getItem('user_token');
-    console.log(token)
-
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'autorizado':localStorage.getItem('user_token')!
-      })
-    }
-    
-    console.log(formValue)
-
-    
-    return firstValueFrom(
-      this.httpClient.delete<any[]>(this.baseUrl,formValue)
-    );
-     
-    
-    
+  addCotizacion(formValue: any) {
+    return firstValueFrom(this.httpClient.post<any>(this.baseUrl, formValue, this.getHttpOptions()));
   }
 
-  //constructor() { }
+  deleteCotizacion(cotizacionId: string) {
+    return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${cotizacionId}`, this.getHttpOptions()));
+  }
 }
