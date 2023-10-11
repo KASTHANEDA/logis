@@ -26,4 +26,9 @@ export class CotizacionesComponent {
   DelCotizaciones(a: any){
     const cot =  this.cotService.DelCotizaciones(a);
   }
+
+  editCotizaciones(a: any){
+    const cot =  this.cotService.editCotizaciones(a);
+  }
+  
 }

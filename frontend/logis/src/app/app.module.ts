@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { ServicesDetailsComponent } from './component/layout/servicios/services-details/services-details.component';
 import { AddCotizacionesComponent } from './component/layout/cotizaciones/add-cotizaciones/add-cotizaciones.component';
 import { PricingComponent } from './component/layout/pricing/pricing.component';
+import { EditCotizacionesComponent } from './component/layout/cotizaciones/edit-cotizaciones/edit-cotizaciones.component';
 
 
 
@@ -36,7 +37,8 @@ import { PricingComponent } from './component/layout/pricing/pricing.component';
     SomosComponent,
     ServicesDetailsComponent,
     AddCotizacionesComponent,
-    PricingComponent
+    PricingComponent,
+    EditCotizacionesComponent
   ],
   imports: [
     BrowserModule,

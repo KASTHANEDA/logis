@@ -127,10 +127,14 @@ GET http://localhost:9100/api/users/64f293c7a25d8630acbeed67 HTTP/1.1
 
 
 #####
+#########
 
+GET http://localhost:9100/api/users HTTP/1.1
+//autorizado: : $2a$12$0vY0/RnWlPUr.IC8gJjHPeNJuUf38drzRYLF9eejdsE.laIAeV3YS
+###########
 
 #####
-PUT http://localhost:9100/api/users/64f293c7a25d8630acbeed67 HTTP/1.1
+PUT http://localhost:9100/api/users/6517878edd723676e6b6cc2c HTTP/1.1
 Content-Type: application/json
  
       {
@@ -138,7 +142,7 @@ Content-Type: application/json
     "apellido": "CASTAÑEDA",
     "edad": 31,
     "login": "HGHFJHH",
-    "password": "passNHHNHJword777",
+    "password": "lkkhouihouihui",
     "email": "laNura@eNxample.com",
     "estado": "activo",
     "perfil": "usuario"

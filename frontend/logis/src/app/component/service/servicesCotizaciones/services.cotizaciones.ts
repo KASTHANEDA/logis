@@ -67,5 +67,23 @@ export class cotizacionesServices {
     
   }
 
+  editCotizaciones(formValue:any){
+    const token = localStorage.getItem('user_token');
+    console.log(token)
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'autorizado':localStorage.getItem('user_token')!
+      })
+    }
+    
+    console.log(formValue)
+
+    return firstValueFrom( 
+      this.httpClient.post<any>(`${this.baseUrl}/`,formValue,httpOptions)
+     
+    )
+  }
+
   //constructor() { }
 }
