@@ -62,7 +62,7 @@ export class EditCotizacionesComponent {
     // const res = await this.cotizacionServices.register(this.formulario.value);
     const res = await this.cotizacionServices.editCotizaciones(this.formulario.value);
     console.log(res)
-    this.router.navigate(['/cotizaciones'])
+    this.router.navigate(['/editCotizaciones'])
     console.log(this.formulario.value)
   }
   
