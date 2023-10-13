@@ -9,6 +9,7 @@ import { CotizacionesService } from '../../service/servicesCotizaciones/services
 })
 export class CotizacionesComponent implements OnInit {
   arrCot: any[] = [];
+  cotService: any;
 
   constructor(private cotizacionesService: CotizacionesService) {}
 
