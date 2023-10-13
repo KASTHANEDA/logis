@@ -26,7 +26,29 @@ export class CotizacionesService {
     return firstValueFrom(this.httpClient.post<any>(this.baseUrl, formValue, this.getHttpOptions()));
   }
 
+<<<<<<< HEAD
   deleteCotizacion(cotizacionId: string) {
     return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${cotizacionId}`, this.getHttpOptions()));
   }
+=======
+  editCotizaciones(formValue:any){
+    const token = localStorage.getItem('user_token');
+    console.log(token)
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'autorizado':localStorage.getItem('user_token')!
+      })
+    }
+    
+    console.log(formValue)
+
+    return firstValueFrom( 
+      this.httpClient.post<any>(`${this.baseUrl}/`,formValue,httpOptions)
+     
+    )
+  }
+
+  //constructor() { }
+>>>>>>> 6c93a74c6c599a7852cc974cbed25fa8535c48e0
 }

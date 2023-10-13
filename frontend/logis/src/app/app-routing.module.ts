@@ -11,6 +11,7 @@ import { ServicesDetailsComponent } from './component/layout/servicios/services-
 import { AddCotizacionesComponent } from './component/layout/cotizaciones/add-cotizaciones/add-cotizaciones.component';
 import { PricingComponent } from './component/layout/pricing/pricing.component';
 import { ContactenosComponent } from './component/layout/contactenos/contactenos.component';
+import { EditCotizacionesComponent } from './component/layout/cotizaciones/edit-cotizaciones/edit-cotizaciones.component';
 import { CotizacionesComponent } from './component/layout/cotizaciones/cotizaciones.component';
 
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {    path: 'cotizaciones', component: CotizacionesComponent ,canActivate:[loginGuard] },
    {    path: 'AddCotizaciones', component: AddCotizacionesComponent ,canActivate:[loginGuard] },
    {    path: 'DelCotizaciones', component: CotizacionesComponent ,canActivate:[loginGuard] },
+   {    path: 'editCotizaciones', component: EditCotizacionesComponent ,canActivate:[loginGuard] },
   {    path: '', component: CarrusellComponent  },
   {    path: '**', component: CarrusellComponent  }
   

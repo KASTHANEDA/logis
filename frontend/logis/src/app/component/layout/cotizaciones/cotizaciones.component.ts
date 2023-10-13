@@ -32,5 +32,10 @@ export class CotizacionesComponent implements OnInit {
       console.error('Error al eliminar cotización: ', error);
     }
   }
+
+  editCotizaciones(a: any){
+    const cot =  this.cotService.editCotizaciones(a);
+  }
+  
 }
 
