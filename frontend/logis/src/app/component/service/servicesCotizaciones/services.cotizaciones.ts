@@ -44,7 +44,7 @@ export class CotizacionesService {
     console.log(cotizacionId)
 
     return firstValueFrom( 
-      this.httpClient.put<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
+      this.httpClient.get<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
      
     )
   }
