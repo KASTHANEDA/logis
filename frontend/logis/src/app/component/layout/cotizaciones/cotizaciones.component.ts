@@ -34,8 +34,15 @@ export class CotizacionesComponent implements OnInit {
     }
   }
 
-  editCotizaciones(a: any){
-    const cot =  this.cotService.editCotizaciones(a);
+ 
+  async editCotizaciones(cotizacionId: string) {
+    try {
+      await this.cotizacionesService.editCotizaciones(cotizacionId);
+      //  const cot =  this.cotService.editCotizaciones(cotizacionId);
+      this.arrCot = this.arrCot.filter(cot => cot._id !== cotizacionId);
+    } catch (error) {
+      console.error('Error al editar cotización: ', error);
+    }
   }
   
 }

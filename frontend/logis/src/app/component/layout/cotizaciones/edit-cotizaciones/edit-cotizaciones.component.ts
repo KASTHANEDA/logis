@@ -14,6 +14,7 @@ export class EditCotizacionesComponent {
   formulario: FormGroup;
   
   cotizacionServices = inject(CotizacionesService)
+arrCot: any;
 
 
   constructor() {

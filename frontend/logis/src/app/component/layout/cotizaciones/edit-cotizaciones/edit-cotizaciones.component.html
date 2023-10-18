@@ -25,9 +25,9 @@
     </div>
     <h2>Formulario de Cotización</h2>
   
-    <div class="container">
+    <div class="container" *ngFor="let cotizacion of arrCot">
   
-  
+      
   
       <form class="contenedorAdd" [formGroup]="formulario" (ngSubmit)="onSubmit()" >
   
@@ -36,7 +36,7 @@
           <input type="number" id="idCot" formControlName="idCot" required value="3">
   
           <label for="Cliente">Cliente:</label>
-          <input type="text" id="Cliente" formControlName="Cliente" required value="EXITO SAS">
+          <input type="text" value={{ cotizacion.Cliente }} id="Cliente" formControlName="Cliente" required >
   
           <label for="Modalidad">Modalidad:</label>
           <input type="text" id="Modalidad" formControlName="Modalidad" required value="LCL">
