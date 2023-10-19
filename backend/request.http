@@ -3,7 +3,7 @@
 #########
 
 GET http://localhost:9100/api/users HTTP/1.1
-//autorizado: : $2a$12$0vY0/RnWlPUr.IC8gJjHPeNJuUf38drzRYLF9eejdsE.laIAeV3YS
+autorizado: : $2a$12$0vY0/RnWlPUr.IC8gJjHPeNJuUf38drzRYLF9eejdsE.laIAeV3YS
 ###########
 
 #########
