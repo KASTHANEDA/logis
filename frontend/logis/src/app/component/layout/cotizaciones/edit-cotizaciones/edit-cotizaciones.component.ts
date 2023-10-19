@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { cotizacionesServices } from 'src/app/component/service/servicesCotizaciones/services.cotizaciones';
+import { CotizacionesService } from 'src/app/component/service/servicesCotizaciones/services.cotizaciones';
 
 @Component({
   selector: 'app-edit-cotizaciones',
@@ -13,7 +13,8 @@ export class EditCotizacionesComponent {
 
   formulario: FormGroup;
   
-  cotizacionServices = inject(cotizacionesServices)
+  cotizacionServices = inject(CotizacionesService)
+arrCot: any;
 
 
   constructor() {
@@ -62,7 +63,7 @@ export class EditCotizacionesComponent {
     // const res = await this.cotizacionServices.register(this.formulario.value);
     const res = await this.cotizacionServices.editCotizaciones(this.formulario.value);
     console.log(res)
-    this.router.navigate(['/cotizaciones'])
+    this.router.navigate(['/editCotizaciones'])
     console.log(this.formulario.value)
   }
   

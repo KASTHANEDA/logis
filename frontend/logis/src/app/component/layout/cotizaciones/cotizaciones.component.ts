@@ -1,34 +1,49 @@
-import { Component } from '@angular/core';
-import { cotizacionesServices } from '../../service/servicesCotizaciones/services.cotizaciones';
+import { Component, OnInit } from '@angular/core';
+import { CotizacionesService } from '../../service/servicesCotizaciones/services.cotizaciones';
+
 
 @Component({
   selector: 'app-cotizaciones',
   templateUrl: './cotizaciones.component.html',
   styleUrls: ['./cotizaciones.component.css']
 })
-export class CotizacionesComponent {
+export class CotizacionesComponent implements OnInit {
   arrCot: any[] = [];
+  cotService: any;
 
-  constructor(private cotService: cotizacionesServices) {}
+  constructor(private cotizacionesService: CotizacionesService) {}
 
-  async ngOnInit() {
+  ngOnInit() {
+    this.loadCotizaciones();
+  }
+
+  async loadCotizaciones() {
     try {
-      const cot = await this.cotService.getAll();
-      if (Array.isArray(cot)) {
-        this.arrCot = cot;
-      } else {
-        console.error('El servicio no devolvió una matriz de datos: ', cot);
-      }
+      this.arrCot = await this.cotizacionesService.getAll();
     } catch (error) {
       console.error('Error al obtener datos: ', error);
     }
   }
-  DelCotizaciones(a: any){
-    const cot =  this.cotService.DelCotizaciones(a);
+
+  async deleteCotizacion(cotizacionId: string) {
+    try {
+      await this.cotizacionesService.deleteCotizacion(cotizacionId);
+      this.arrCot = this.arrCot.filter(cot => cot._id !== cotizacionId);
+    } catch (error) {
+      console.error('Error al eliminar cotización: ', error);
+    }
   }
 
-  editCotizaciones(a: any){
-    const cot =  this.cotService.editCotizaciones(a);
+ 
+  async editCotizaciones(cotizacionId: string) {
+    try {
+      await this.cotizacionesService.editCotizaciones(cotizacionId);
+      //  const cot =  this.cotService.editCotizaciones(cotizacionId);
+      this.arrCot = this.arrCot.filter(cot => cot._id !== cotizacionId);
+    } catch (error) {
+      console.error('Error al editar cotización: ', error);
+    }
   }
   
 }
+

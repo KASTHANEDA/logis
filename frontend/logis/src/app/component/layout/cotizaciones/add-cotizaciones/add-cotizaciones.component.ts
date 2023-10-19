@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { cotizacionesServices } from 'src/app/component/service/servicesCotizaciones/services.cotizaciones';
+import { CotizacionesService } from 'src/app/component/service/servicesCotizaciones/services.cotizaciones';
 
 
 @Component({
@@ -14,7 +14,7 @@ export class AddCotizacionesComponent {
 
   formulario: FormGroup;
   
-  cotizacionServices = inject(cotizacionesServices)
+  cotizacionServices = inject(CotizacionesService)
 
 
   constructor() {
@@ -60,8 +60,7 @@ export class AddCotizacionesComponent {
   async onSubmit(){
     const token = localStorage.getItem('user_token');
     this.formulario.value.token = token;
-    // const res = await this.cotizacionServices.register(this.formulario.value);
-    const res = await this.cotizacionServices.AddCotizaciones(this.formulario.value);
+    const res = await this.cotizacionServices.addCotizacion(this.formulario.value);
     console.log(res)
     this.router.navigate(['/cotizaciones'])
     console.log(this.formulario.value)
