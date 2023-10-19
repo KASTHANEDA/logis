@@ -14,16 +14,16 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a href="inicio" class="active">Home</a></li>
-        <li><a href="somos">About</a></li>
+        <li><a href="somos">Somos</a></li>
         <!--  -->
 
         <li class="dropdown"><a href="servicos"><span>Servicios</span> <i
               class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
-            <li><a href="ServiciosDetails">ServiciosDetails</a></li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
+            <li><a href="ServiciosDetails">Detalle de servicios</a></li>
+            <li><a href="#">Terrestre</a></li>
+            <li><a href="#">Aereo</a></li>
+            <li><a href="#">Maritimo</a></li>
           </ul>
           <ul>
 
@@ -33,7 +33,7 @@
 
         <!--  -->
 
-        <li><a href="pricing">Pricing</a></li>
+        <li><a href="pricing">Precios</a></li>
 
         <!--  -->
         <li class="dropdown" *ngIf="userServices.isLogged()">
@@ -42,12 +42,11 @@
             <li><a href="cotizaciones">Cotizaciones</a></li>
             <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
                   class="bi bi-chevron-down dropdown-indicator"></i></a>
-              <ul>
-                <li><a href="ServiciosDetails">Detalle Servicios</a></li>
+              <ul>                
                 <li><a href="cotizaciones">Cotizaciones</a></li>
                 <li><a href="AddCotizaciones">Agregar Cotizacion</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
+                <li><a href="#">Editar cotizaciones</a></li>
+                <li><a href="#">borrar cotizaciones</a></li>
               </ul>
             </li>
             <li><a href="#">Drop Down 2</a></li>
@@ -60,7 +59,7 @@
         </li>
 
         <!--  -->
-        <li><a href="contactenos">Contact</a></li>
+        <li><a href="contactenos">Contactenos</a></li>
         <li><a class="get-a-quote" href="inicio">Get a Quote</a></li>
         <li>
           <button *ngIf="!userServices.isLogged()" type="button" class="btn btn-success" routerLink="login"
