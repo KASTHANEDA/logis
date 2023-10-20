@@ -31,7 +31,7 @@ export class CotizacionesService {
     return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${cotizacionId}`, this.getHttpOptions()));
   }
 
-  editCotizaciones(cotizacionId: string){
+  async editCotizaciones(cotizacionId: string){
     const token = localStorage.getItem('user_token');
     console.log(token)
 
@@ -43,10 +43,9 @@ export class CotizacionesService {
     
     console.log(cotizacionId)
 
-    return firstValueFrom( 
-      this.httpClient.get<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
+    await  this.httpClient.put<any>(`${this.baseUrl}/${cotizacionId}`,body:formValue,httpOptions)
      
-    )
+    
   }
 
   //constructor() { }
