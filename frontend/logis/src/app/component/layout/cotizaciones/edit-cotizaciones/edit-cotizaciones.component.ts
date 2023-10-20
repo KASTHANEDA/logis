@@ -14,10 +14,12 @@ export class EditCotizacionesComponent {
   formulario: FormGroup;
   
   cotizacionServices = inject(CotizacionesService)
-arrCot: any;
+  arrCot: any[] = [];
+  cotService: any;
 
 
-  constructor() {
+
+  constructor(private cotizacionesService: CotizacionesService) {
     this.formulario = new FormGroup({
      
 
@@ -56,15 +58,25 @@ arrCot: any;
 
     })
   }
+  ngOnInit() {
+    this.onSubmit();
+  }
+
 
   async onSubmit(){
-    const token = localStorage.getItem('user_token');
-    this.formulario.value.token = token;
-    // const res = await this.cotizacionServices.register(this.formulario.value);
-    const res = await this.cotizacionServices.editCotizaciones(this.formulario.value);
-    console.log(res)
-    this.router.navigate(['/editCotizaciones'])
-    console.log(this.formulario.value)
+
+    try {
+      this.arrCot = await this.cotizacionesService.getAll();
+    } catch (error) {
+      console.error('Error al obtener datos: ', error);
+    }
+    // const token = localStorage.getItem('user_token');
+    // this.formulario.value.token = token;
+    // // const res = await this.cotizacionServices.register(this.formulario.value);
+    // const res = await this.cotizacionServices.editCotizaciones(this.formulario.value);
+    // console.log(res)
+    // this.router.navigate(['/editCotizaciones'])
+    // console.log(this.formulario.value)
   }
   
 }

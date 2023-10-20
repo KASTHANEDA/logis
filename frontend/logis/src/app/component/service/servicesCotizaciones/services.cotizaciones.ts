@@ -7,6 +7,7 @@ import { firstValueFrom } from 'rxjs';
 })
 export class CotizacionesService {
   private baseUrl = 'http://localhost:9100/api/cotizaciones';
+  private baseUrlCot = 'http://localhost:9100/api/editCotizaciones';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -43,7 +44,8 @@ export class CotizacionesService {
     
     console.log(cotizacionId)
 
-    await  this.httpClient.put<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
+    await this.httpClient.get<any[]>(`${this.baseUrl}/${cotizacionId}`, httpOptions);
+    // await  this.httpClient.get<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
      
     
   }

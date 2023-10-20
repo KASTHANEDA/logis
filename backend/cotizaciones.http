@@ -66,7 +66,7 @@ autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg
 
 #########
 
-GET http://localhost:9100/api/cotizaciones HTTP/1.1
+GET http://localhost:9100/api/cotizaciones/652f274f31416551b234857b HTTP/1.1
 autorizado:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTUxNzUwNTJ9.l7kGFfg7UcMSFgrknGEPpgpiyOfQkSyUChItjwKU2VI
 
 ###############################
