@@ -43,7 +43,7 @@ export class CotizacionesService {
     
     console.log(cotizacionId)
 
-    await  this.httpClient.put<any>(`${this.baseUrl}/${cotizacionId}`,body:formValue,httpOptions)
+    await  this.httpClient.put<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
      
     
   }
