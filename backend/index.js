@@ -6,7 +6,7 @@ import connectToDataBase from "./config/db.js";
 import cors from 'cors';
 
 const app = express();
-const port = process.env.PORT || 9100;
+const port = process.env.PORT || 8080;
 dotenv.config();
 connectToDataBase();
 app.use(cors());
