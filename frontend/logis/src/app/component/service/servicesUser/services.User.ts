@@ -9,8 +9,8 @@ import { firstValueFrom } from 'rxjs';
 export class UsersService {
   
   httpClient = inject(HttpClient);
-  baseUrl = 'http://localhost:9100/api/users'
-  userUrl = 'http://localhost:9100/api'
+  baseUrl = 'http://http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/users'
+  userUrl = 'http://http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api'
 
   
 
