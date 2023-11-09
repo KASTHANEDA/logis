@@ -6,8 +6,8 @@ import { firstValueFrom } from 'rxjs';
   providedIn: 'root'
 })
 export class CotizacionesService {
-  private baseUrl = 'https://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/cotizaciones';
-  private baseUrlCot = 'https://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/editCotizaciones';
+  private baseUrl = 'http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/cotizaciones';
+  private baseUrlCot = 'http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/editCotizaciones';
 
   constructor(private httpClient: HttpClient) {}
 
