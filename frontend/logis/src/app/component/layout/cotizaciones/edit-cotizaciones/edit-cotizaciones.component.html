@@ -25,123 +25,20 @@
     </div>
     <h2>Formulario de Cotización</h2>
   
-    <div class="container" *ngFor="let cotizacion of arrCot">
-  
+    <div class="container" *ngFor="let cotizacion of arrCot">  
       
   
       <form class="contenedorAdd" [formGroup]="formulario" (ngSubmit)="onSubmit()" >
   
         <div class="Columna">
           <label for="idCot">ID de Cotización:</label>
-          <input type="number" id="idCot" formControlName="idCot" required value="3">
+          <input type="number" value={{ cotizacion.idCot }}  id="idCot" formControlName="idCot" required value="3">
   
           <label for="Cliente">Cliente:</label>
           <input type="text" value={{ cotizacion.Cliente }} id="Cliente" formControlName="Cliente" required >
   
-          <label for="Modalidad">Modalidad:</label>
-          <input type="text" id="Modalidad" formControlName="Modalidad" required value="LCL">
-  
-          <label for="CiudadOrigen">Ciudad de Origen:</label>
-          <input type="text" id="CiudadOrigen" formControlName="CiudadOrigen" required value="BABILONIA">
-  
-          <label for="DireccionOrigen">Dirección de Origen:</label>
-          <input type="text" id="DireccionOrigen" formControlName="DireccionOrigen" required value="CALE 44 #U 78-956">
-  
-          <label for="CiudadDestino">Ciudad de Destino:</label>
-          <input type="text" id="CiudadDestino" formControlName="CiudadDestino" required value="MANIZALEZ">
-  
-          <label for="DireccionDestino">Dirección de Destino:</label>
-          <input type="text" id="DireccionDestino" formControlName="DireccionDestino" required value="CALLE 45465# DF7485">
-  
-          <label for="Asunto">Asunto:</label>
-          <input type="text" id="Asunto" formControlName="Asunto" required value="GUANTES INDUSTRIALES ">
-  
+       
         </div>
-  
-        <div class="Columna">
-  
-          <label for="valorCif">Valor CIF:</label>
-          <input type="number" id="valorCif" formControlName="valorCif" required value="585">
-  
-          <label for="ValorCifCalculado">Valor CIF Calculado:</label>
-          <input type="number" id="ValorCifCalculado" formControlName="ValorCifCalculado" required value="525">
-  
-          <label for="TotalGastosOrigen">Total Gastos Origen:</label>
-          <input type="number" id="TotalGastosOrigen" formControlName="TotalGastosOrigen" required value="48121">
-  
-          <label for="moneda">Moneda:</label>
-          <input type="text" id="moneda" formControlName="moneda" required value="USD">
-          <label for="trm">TRM:</label>
-          <input type="number" id="trm" formControlName="trm" required value="3800.25">
-  
-          <label for="factorEuroDollar">Factor Euro-Dollar:</label>
-          <input type="number" id="factorEuroDollar" formControlName="factorEuroDollar" required value="1.2">
-  
-          <label for="descripcionMercancia">Descripción de Mercancía:</label>
-          <input type="text" id="descripcionMercancia" formControlName="descripcionMercancia" required value="GFADFGBVBBGB DFBFBTGHWRTHRTHRTH">
-  
-          <label for="fechaCreacion">Fecha de Creación:</label>
-          <input type="text" id="fechaCreacion" formControlName="fechaCreacion" required>
-  
-  
-        </div>
-  
-        <div class="Columna">
-          <label for="ClaseMatId">Clase Mat Id:</label>
-          <input type="number" id="ClaseMatId" formControlName="ClaseMatId" required value="EXPLOSIVO">
-  
-          <label for="TipoNegocio">Tipo de Negocio:</label>
-          <input type="text" id="TipoNegocio" formControlName="TipoNegocio" required value="EXPORTACION">
-  
-          <label for="ModoTransporte">Modo de Transporte:</label>
-          <input type="text" id="ModoTransporte" formControlName="ModoTransporte" required value="MARITIMO">
-  
-          <label for="TerminosNegociacion">Términos de Negociación:</label>
-          <input type="text" id="TerminosNegociacion" formControlName="TerminosNegociacion" required value="fob">
-  
-          <label for="EstadoColor">Estado Color:</label>
-          <input type="text" id="EstadoColor" formControlName="EstadoColor" required value="#56767">
-  
-          <label for="diasTransito">Días de Tránsito:</label>
-          <input type="number" id="diasTransito" formControlName="diasTransito" required value="30">
-  
-          <label for="VigenciaOferta">Vigencia de Oferta:</label>
-          <input type="text" id="VigenciaOferta" formControlName="VigenciaOferta" required value="2023/08/29">
-  
-          <label for="ValorDeclarado">Valor Declarado:</label>
-          <input type="number" id="ValorDeclarado" formControlName="ValorDeclarado" required value="4800">
-  
-        </div>
-  
-        <div class="Columna">
-          <label for="fechaModificacion">Fecha de Modificación:</label>
-          <input type="text" id="fechaModificacion" formControlName="fechaModificacion" required value="2023-05-18">
-  
-          <label for="PaisOrigen">País de Origen:</label>
-          <input type="text" id="PaisOrigen" formControlName="PaisOrigen" required value="Islas Caiman">
-  
-          <label for="PaisDestino">País de Destino:</label>
-          <input type="text" id="PaisDestino" formControlName="PaisDestino" required value="ucrania">
-  
-          <label for="fechaProximaRevision">Fecha de Próxima Revisión:</label>
-          <input type="text" id="fechaProximaRevision" formControlName="fechaProximaRevision" required value="2023/05/5">
-  
-          <label for="idProveedores">ID de Proveedores:</label>
-          <input type="number" id="idProveedores" formControlName="idProveedores" required value="551">
-  
-          <label for="Servicios">Servicios:</label>
-          <input type="text" id="Servicios" formControlName="Servicios" required value="CARGA Y SEGURO">
-  
-          <label for="estado">Estado:</label>
-          <input type="text" id="estado" formControlName="estado" required value="ABIERTTO">
-  
-          <label for="comercial">Comercial:</label>
-          <input type="text" id="comercial" formControlName="comercial" required value="JAIRO">
-          <!-- bonton de agregar  -->
-          <input type="submit" value="agregar" class="btn btn-primary" >
-        </div>
-  
-  
   
       </form>
   

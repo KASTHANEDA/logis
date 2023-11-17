@@ -6,7 +6,8 @@ import { firstValueFrom } from 'rxjs';
   providedIn: 'root'
 })
 export class CotizacionesService {
-  private baseUrl = 'http://localhost:9100/api/cotizaciones';
+  private baseUrl = 'http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/cotizaciones';
+  private baseUrlCot = 'http://stackj-appli-czeuxjdc1k0i-1706506766.us-east-2.elb.amazonaws.com:8080/api/editCotizaciones';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -31,7 +32,7 @@ export class CotizacionesService {
     return firstValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${cotizacionId}`, this.getHttpOptions()));
   }
 
-  editCotizaciones(cotizacionId: string){
+  async editCotizaciones(cotizacionId: string){
     const token = localStorage.getItem('user_token');
     console.log(token)
 
@@ -43,10 +44,10 @@ export class CotizacionesService {
     
     console.log(cotizacionId)
 
-    return firstValueFrom( 
-      this.httpClient.get<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
+    await this.httpClient.get<any[]>(`${this.baseUrl}/${cotizacionId}`, httpOptions);
+    // await  this.httpClient.get<any>(`${this.baseUrl}/${cotizacionId}`,httpOptions)
      
-    )
+    
   }
 
   //constructor() { }
